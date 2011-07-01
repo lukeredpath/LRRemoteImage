@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A33CC74413BD497C00479068 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33CC74313BD497C00479068 /* UIKit.framework */; };
+		A33CC74613BD497C00479068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33CC74513BD497C00479068 /* Foundation.framework */; };
+		A33CC74813BD497C00479068 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33CC74713BD497C00479068 /* CoreGraphics.framework */; };
+		A33CC74E13BD497C00479068 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A33CC74C13BD497C00479068 /* InfoPlist.strings */; };
+		A33CC75013BD497D00479068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CC74F13BD497D00479068 /* main.m */; };
+		A33CC75413BD497D00479068 /* LRRemoteImageAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CC75313BD497D00479068 /* LRRemoteImageAppDelegate.m */; };
+		A33CC75613BD497D00479068 /* LRRemoteImageViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */; };
+		A33CC75813BD497D00479068 /* LRRemoteImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CC75713BD497D00479068 /* LRRemoteImageViewController.m */; };
+		A33CC75B13BD497D00479068 /* LRRemoteImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33CC75913BD497D00479068 /* LRRemoteImageViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A33CC73F13BD497C00479068 /* LRRemoteImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRRemoteImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33CC74313BD497C00479068 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A33CC74513BD497C00479068 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A33CC74713BD497C00479068 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A33CC74B13BD497C00479068 /* LRRemoteImage-Info.plist */ = {isa = PBXFileReference; path = "LRRemoteImage-Info.plist"; sourceTree = "<group>"; };
+		A33CC74D13BD497C00479068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A33CC74F13BD497D00479068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A33CC75113BD497D00479068 /* LRRemoteImage-Prefix.pch */ = {isa = PBXFileReference; path = "LRRemoteImage-Prefix.pch"; sourceTree = "<group>"; };
+		A33CC75213BD497D00479068 /* LRRemoteImageAppDelegate.h */ = {isa = PBXFileReference; path = LRRemoteImageAppDelegate.h; sourceTree = "<group>"; };
+		A33CC75313BD497D00479068 /* LRRemoteImageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImageAppDelegate.m; sourceTree = "<group>"; };
+		A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRemoteImageViewController.h; sourceTree = "<group>"; };
+		A33CC75713BD497D00479068 /* LRRemoteImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImageViewController.m; sourceTree = "<group>"; };
+		A33CC75A13BD497D00479068 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LRRemoteImageViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A33CC73C13BD497C00479068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33CC74413BD497C00479068 /* UIKit.framework in Frameworks */,
+				A33CC74613BD497C00479068 /* Foundation.framework in Frameworks */,
+				A33CC74813BD497C00479068 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A33CC73413BD497C00479068 = {
+			isa = PBXGroup;
+			children = (
+				A33CC74913BD497C00479068 /* LRRemoteImage */,
+				A33CC74213BD497C00479068 /* Frameworks */,
+				A33CC74013BD497C00479068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A33CC74013BD497C00479068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A33CC73F13BD497C00479068 /* LRRemoteImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A33CC74213BD497C00479068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A33CC74313BD497C00479068 /* UIKit.framework */,
+				A33CC74513BD497C00479068 /* Foundation.framework */,
+				A33CC74713BD497C00479068 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A33CC74913BD497C00479068 /* LRRemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				A33CC75213BD497D00479068 /* LRRemoteImageAppDelegate.h */,
+				A33CC75313BD497D00479068 /* LRRemoteImageAppDelegate.m */,
+				A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */,
+				A33CC75713BD497D00479068 /* LRRemoteImageViewController.m */,
+				A33CC75913BD497D00479068 /* LRRemoteImageViewController.xib */,
+				A33CC74A13BD497C00479068 /* Supporting Files */,
+			);
+			path = LRRemoteImage;
+			sourceTree = "<group>";
+		};
+		A33CC74A13BD497C00479068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33CC74B13BD497C00479068 /* LRRemoteImage-Info.plist */,
+				A33CC74C13BD497C00479068 /* InfoPlist.strings */,
+				A33CC74F13BD497D00479068 /* main.m */,
+				A33CC75113BD497D00479068 /* LRRemoteImage-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A33CC73E13BD497C00479068 /* LRRemoteImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33CC75E13BD497D00479068 /* Build configuration list for PBXNativeTarget "LRRemoteImage" */;
+			buildPhases = (
+				A33CC73B13BD497C00479068 /* Sources */,
+				A33CC73C13BD497C00479068 /* Frameworks */,
+				A33CC73D13BD497C00479068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRRemoteImage;
+			productName = LRRemoteImage;
+			productReference = A33CC73F13BD497C00479068 /* LRRemoteImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A33CC73613BD497C00479068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "LJR Software Limited";
+			};
+			buildConfigurationList = A33CC73913BD497C00479068 /* Build configuration list for PBXProject "LRRemoteImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A33CC73413BD497C00479068;
+			productRefGroup = A33CC74013BD497C00479068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A33CC73E13BD497C00479068 /* LRRemoteImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A33CC73D13BD497C00479068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33CC74E13BD497C00479068 /* InfoPlist.strings in Resources */,
+				A33CC75613BD497D00479068 /* LRRemoteImageViewController.h in Resources */,
+				A33CC75B13BD497D00479068 /* LRRemoteImageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A33CC73B13BD497C00479068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33CC75013BD497D00479068 /* main.m in Sources */,
+				A33CC75413BD497D00479068 /* LRRemoteImageAppDelegate.m in Sources */,
+				A33CC75813BD497D00479068 /* LRRemoteImageViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A33CC74C13BD497C00479068 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33CC74D13BD497C00479068 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A33CC75913BD497D00479068 /* LRRemoteImageViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33CC75A13BD497D00479068 /* en */,
+			);
+			name = LRRemoteImageViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A33CC75C13BD497D00479068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A33CC75D13BD497D00479068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A33CC75F13BD497D00479068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRRemoteImage/LRRemoteImage-Prefix.pch";
+				INFOPLIST_FILE = "LRRemoteImage/LRRemoteImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A33CC76013BD497D00479068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRRemoteImage/LRRemoteImage-Prefix.pch";
+				INFOPLIST_FILE = "LRRemoteImage/LRRemoteImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A33CC73913BD497C00479068 /* Build configuration list for PBXProject "LRRemoteImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33CC75C13BD497D00479068 /* Debug */,
+				A33CC75D13BD497D00479068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33CC75E13BD497D00479068 /* Build configuration list for PBXNativeTarget "LRRemoteImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33CC75F13BD497D00479068 /* Debug */,
+				A33CC76013BD497D00479068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A33CC73613BD497C00479068 /* Project object */;
+}
