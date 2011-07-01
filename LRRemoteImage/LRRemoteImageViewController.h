@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LRRemoteImageViewController : UIViewController
-
+@interface LRRemoteImageViewController : UIViewController {
+  UIImageView *imageView;
+}
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @end

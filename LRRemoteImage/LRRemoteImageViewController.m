@@ -7,54 +7,18 @@
 //
 
 #import "LRRemoteImageViewController.h"
+#import "LRRemoteImage.h"
+
+#define kDEMO_IMAGE_URL @"http://paulstallard.files.wordpress.com/2008/11/tardis_2.jpg"
 
 @implementation LRRemoteImageViewController
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
+@synthesize imageView;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+  LRRemoteImage *remoteImage = [LRRemoteImage imageWithURL:[NSURL URLWithString:kDEMO_IMAGE_URL]];
+  [self.imageView setRemoteImage:remoteImage];
 }
 
 @end

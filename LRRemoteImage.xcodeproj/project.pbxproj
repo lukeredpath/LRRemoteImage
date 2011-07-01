@@ -16,6 +16,7 @@
 		A33CC75613BD497D00479068 /* LRRemoteImageViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */; };
 		A33CC75813BD497D00479068 /* LRRemoteImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CC75713BD497D00479068 /* LRRemoteImageViewController.m */; };
 		A33CC75B13BD497D00479068 /* LRRemoteImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33CC75913BD497D00479068 /* LRRemoteImageViewController.xib */; };
+		A33CC76413BD49AC00479068 /* LRRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CC76313BD49AC00479068 /* LRRemoteImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,15 +24,17 @@
 		A33CC74313BD497C00479068 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33CC74513BD497C00479068 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A33CC74713BD497C00479068 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A33CC74B13BD497C00479068 /* LRRemoteImage-Info.plist */ = {isa = PBXFileReference; path = "LRRemoteImage-Info.plist"; sourceTree = "<group>"; };
+		A33CC74B13BD497C00479068 /* LRRemoteImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LRRemoteImage-Info.plist"; sourceTree = "<group>"; };
 		A33CC74D13BD497C00479068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A33CC74F13BD497D00479068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A33CC75113BD497D00479068 /* LRRemoteImage-Prefix.pch */ = {isa = PBXFileReference; path = "LRRemoteImage-Prefix.pch"; sourceTree = "<group>"; };
-		A33CC75213BD497D00479068 /* LRRemoteImageAppDelegate.h */ = {isa = PBXFileReference; path = LRRemoteImageAppDelegate.h; sourceTree = "<group>"; };
+		A33CC75113BD497D00479068 /* LRRemoteImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LRRemoteImage-Prefix.pch"; sourceTree = "<group>"; };
+		A33CC75213BD497D00479068 /* LRRemoteImageAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRemoteImageAppDelegate.h; sourceTree = "<group>"; };
 		A33CC75313BD497D00479068 /* LRRemoteImageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImageAppDelegate.m; sourceTree = "<group>"; };
 		A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRemoteImageViewController.h; sourceTree = "<group>"; };
 		A33CC75713BD497D00479068 /* LRRemoteImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImageViewController.m; sourceTree = "<group>"; };
 		A33CC75A13BD497D00479068 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LRRemoteImageViewController.xib; sourceTree = "<group>"; };
+		A33CC76213BD49AC00479068 /* LRRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRemoteImage.h; sourceTree = "<group>"; };
+		A33CC76313BD49AC00479068 /* LRRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		A33CC74913BD497C00479068 /* LRRemoteImage */ = {
 			isa = PBXGroup;
 			children = (
+				A33CC76113BD499E00479068 /* LRRemoteImage */,
 				A33CC75213BD497D00479068 /* LRRemoteImageAppDelegate.h */,
 				A33CC75313BD497D00479068 /* LRRemoteImageAppDelegate.m */,
 				A33CC75513BD497D00479068 /* LRRemoteImageViewController.h */,
@@ -97,6 +101,15 @@
 				A33CC75113BD497D00479068 /* LRRemoteImage-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A33CC76113BD499E00479068 /* LRRemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				A33CC76213BD49AC00479068 /* LRRemoteImage.h */,
+				A33CC76313BD49AC00479068 /* LRRemoteImage.m */,
+			);
+			path = LRRemoteImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +178,7 @@
 				A33CC75013BD497D00479068 /* main.m in Sources */,
 				A33CC75413BD497D00479068 /* LRRemoteImageAppDelegate.m in Sources */,
 				A33CC75813BD497D00479068 /* LRRemoteImageViewController.m in Sources */,
+				A33CC76413BD49AC00479068 /* LRRemoteImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
