@@ -2,6 +2,8 @@
 
 This class provides a very simple means of working with remote images.
 
+It is written using ARC, although support for non-ARC builds will be forthcoming.
+
 Example usage:
 
     UIImageView *imageView = [self createImageView];
