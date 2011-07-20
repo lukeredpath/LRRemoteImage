@@ -39,4 +39,5 @@ typedef void (^LRRemoteImageCompletionHandler)(UIImage *, NSError *);
 
 @interface UIImageView (LRRemoteImageLoading)
 - (void)setRemoteImage:(LRRemoteImage *)remoteImage;
+- (void)setRemoteImage:(LRRemoteImage *)remoteImage errorHandler:(void (^)(NSError *))errorHandler;
 @end

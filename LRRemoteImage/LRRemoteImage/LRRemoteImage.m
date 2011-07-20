@@ -57,7 +57,7 @@
 
 @implementation UIImageView (LRRemoteImageLoading)
 
-- (void)setRemoteImage:(LRRemoteImage *)remoteImage
+- (void)setRemoteImage:(LRRemoteImage *)remoteImage errorHandler:(void (^)(NSError *))errorHandler
 {
   if (remoteImage.image) {
     self.image = remoteImage.image;
@@ -65,8 +65,17 @@
     [remoteImage fetchWithQueue:[NSOperationQueue mainQueue]
               completionHandler:^(UIImage *image, NSError *error) {
                 self.image = image;
+                
+                if (error && errorHandler) {
+                  errorHandler(error);
+                }
               }];
   }
+}
+                                                                  
+- (void)setRemoteImage:(LRRemoteImage *)remoteImage
+{
+  [self setRemoteImage:remoteImage errorHandler:nil];
 }
 
 @end
