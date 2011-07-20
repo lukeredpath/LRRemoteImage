@@ -24,6 +24,23 @@ All loaded images will be cached, using the URL as the cache key, using NSCache.
 
 Because NSCache is used, it will automatically be flushed in response to memory warnings.
 
+## UIImageView category
+
+The basic pattern above is encapsulated in a simple category on UIImageView. That means you can simply do the following:
+
+    UIImageView *imageView = [self createImageView];
+    
+    LRRemoteImage *remoteImage = [LRRemoteImage imageWithURL:[NSURL URLWithString:@"http://www.example.com/someimage.jpg"]];
+    
+    [imageView setRemoteImage:remoteImage errorHandler:^(NSError *error) {
+      // handle error
+    }];
+    
+Or, if you aren't worried about errors:
+
+    ...
+    [imageView setRemoteImage:remoteImage];
+
 ## License
 
 This code is licensed under the MIT license.
