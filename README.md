@@ -40,6 +40,8 @@ Or, if you aren't worried about errors:
 
     ...
     [imageView setRemoteImage:remoteImage];
+    
+The category will use the main NSOperationQueue for all fetches; if you need more control over this, you should use the LRRemoteImage API directly.
 
 ## License
 
