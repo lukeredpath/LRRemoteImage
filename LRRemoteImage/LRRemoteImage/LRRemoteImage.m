@@ -7,6 +7,7 @@
 //
 
 #import "LRRemoteImage.h"
+#import "LRMacros.h"
 
 @implementation LRRemoteImage
 
@@ -21,8 +22,18 @@
 {
   if ((self = [super init])) {
     URL = aURL;
+    image = [[[self class] cache] objectForKey:URL];
   }
   return self;
+}
+
++ (NSCache *)cache
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    NSCache *cache = [[NSCache alloc] init];
+    cache.name = @"co.uk.lukeredpath.LRRemoteImage";
+    return cache;
+  });
 }
 
 - (void)fetchWithQueue:(NSOperationQueue *)queue completionHandler:(LRRemoteImageCompletionHandler)handler;
@@ -34,6 +45,7 @@
       handler(nil, error);
     } else {
       image = [UIImage imageWithData:data];
+      [[[self class] cache] setObject:image forKey:URL];
       handler(image, nil);
     }
   }];

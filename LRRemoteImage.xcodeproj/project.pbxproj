@@ -35,6 +35,7 @@
 		A33CC75A13BD497D00479068 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LRRemoteImageViewController.xib; sourceTree = "<group>"; };
 		A33CC76213BD49AC00479068 /* LRRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRemoteImage.h; sourceTree = "<group>"; };
 		A33CC76313BD49AC00479068 /* LRRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRemoteImage.m; sourceTree = "<group>"; };
+		A33CC76613BD502C00479068 /* LRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 		A33CC74A13BD497C00479068 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A33CC76613BD502C00479068 /* LRMacros.h */,
 				A33CC74B13BD497C00479068 /* LRRemoteImage-Info.plist */,
 				A33CC74C13BD497C00479068 /* InfoPlist.strings */,
 				A33CC74F13BD497D00479068 /* main.m */,

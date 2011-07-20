@@ -16,8 +16,24 @@ typedef void (^LRRemoteImageCompletionHandler)(UIImage *, NSError *);
 }
 @property (nonatomic, readonly) UIImage *image;
 
+#pragma mark -
+#pragma mark Factory methods
+
 + (id)imageWithURL:(NSURL *)aURL;
+
+#pragma mark -
+#pragma mark Caching
+
++ (NSCache *)cache;
+
+#pragma mark -
+#pragma mark Initialization
+
 - (id)initWithURL:(NSURL *)aURL;
+
+#pragma mark -
+#pragma mark Fetching Images
+
 - (void)fetchWithQueue:(NSOperationQueue *)queue completionHandler:(LRRemoteImageCompletionHandler)handler;
 @end
 
