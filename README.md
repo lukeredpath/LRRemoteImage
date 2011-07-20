@@ -20,10 +20,9 @@ Example usage:
       }];
     }
     
-All loaded images will be cached, using their URL as the cache, using NSCache. This means that subsequent requests for the image after a fetchWithQueue:completionHandler: call will return the image, as will calls to a completely different LRRemoteImage instance for the same URL (the cache is shared across all LRRemoteImage instances).
+All loaded images will be cached, using the URL as the cache key, using NSCache. This means that subsequent requests for the image after a fetchWithQueue:completionHandler: call will return the image, as will calls to a completely different LRRemoteImage instance for the same URL (the cache is shared across all LRRemoteImage instances).
 
 Because NSCache is used, it will automatically be flushed in response to memory warnings.
-
 
 ## License
 
