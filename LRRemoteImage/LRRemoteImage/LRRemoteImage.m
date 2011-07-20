@@ -22,18 +22,26 @@
 {
   if ((self = [super init])) {
     URL = aURL;
-    image = [[[self class] cache] objectForKey:URL];
+    image = [[[self class] cache] imageForURL:URL];
   }
   return self;
 }
 
-+ (NSCache *)cache
++ (void)initialize
 {
-  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-    NSCache *cache = [[NSCache alloc] init];
-    cache.name = @"co.uk.lukeredpath.LRRemoteImage";
-    return cache;
-  });
+  [self setCache:[LRRemoteImageInMemoryCache sharedInMemoryCache]];
+}
+
+static id<LRRemoteImageCache> __strong _cache = nil;
+
++ (id<LRRemoteImageCache>)cache
+{
+  return _cache;
+}
+
++ (void)setCache:(id<LRRemoteImageCache>)cache
+{
+  _cache = cache;
 }
 
 - (void)fetchWithQueue:(NSOperationQueue *)queue completionHandler:(LRRemoteImageCompletionHandler)handler;
@@ -45,7 +53,7 @@
       handler(nil, error);
     } else {
       image = [UIImage imageWithData:data];
-      [[[self class] cache] setObject:image forKey:URL];
+      [[[self class] cache] cacheImage:image forURL:URL];
       handler(image, nil);
     }
   }];
@@ -53,7 +61,39 @@
 
 @end
 
-#pragma mark -
+#pragma mark - Default caching implementation
+
+@implementation LRRemoteImageInMemoryCache
+
++ (id)sharedInMemoryCache
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    return [[self alloc] init];
+  });
+}
+
+- (id)init {
+  self = [super init];
+  if (self) {
+    cache = [[NSCache alloc] init];
+    cache.name = @"co.uk.lukeredpath.LRRemoteImageInMemoryCache";
+  }
+  return self;
+}
+
+- (void)cacheImage:(UIImage *)image forURL:(NSURL *)url
+{
+  [cache setObject:image forKey:url];
+}
+
+- (UIImage *)imageForURL:(NSURL *)url
+{
+  return [cache objectForKey:url];
+}
+
+@end
+
+#pragma mark - UIImageView category
 
 @implementation UIImageView (LRRemoteImageLoading)
 

@@ -10,6 +10,11 @@
 
 typedef void (^LRRemoteImageCompletionHandler)(UIImage *, NSError *);
 
+@protocol LRRemoteImageCache <NSObject>
+- (void)cacheImage:(UIImage *)image forURL:(NSURL *)url;
+- (UIImage *)imageForURL:(NSURL *)url;
+@end
+
 @interface LRRemoteImage : NSObject {
   NSURL *URL;
   UIImage *image;
@@ -24,7 +29,8 @@ typedef void (^LRRemoteImageCompletionHandler)(UIImage *, NSError *);
 #pragma mark -
 #pragma mark Caching
 
-+ (NSCache *)cache;
++ (id<LRRemoteImageCache>)cache;
++ (void)setCache:(id<LRRemoteImageCache>)cache;
 
 #pragma mark -
 #pragma mark Initialization
@@ -35,6 +41,12 @@ typedef void (^LRRemoteImageCompletionHandler)(UIImage *, NSError *);
 #pragma mark Fetching Images
 
 - (void)fetchWithQueue:(NSOperationQueue *)queue completionHandler:(LRRemoteImageCompletionHandler)handler;
+@end
+
+@interface LRRemoteImageInMemoryCache : NSObject <LRRemoteImageCache> {
+  NSCache *cache;
+}
++ (id)sharedInMemoryCache;
 @end
 
 @interface UIImageView (LRRemoteImageLoading)
